@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
-import torch
-from transformers import pipeline
+from transformers.pipelines import pipeline
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 
@@ -97,4 +96,5 @@ elif selection == "Testimonials":
         st.table(df_testimonials.head(len(df_testimonials))) # .table looks great for product lists
     else:
         st.warning("No testimonial data available.")
+
 
